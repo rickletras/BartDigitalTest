@@ -1,4 +1,4 @@
-Para iniciar a aplicação, executar:
- bower install
- npm install
+Para iniciar a aplicação, executar:<br>
+ bower install<br>
+ npm install<br>
  npm start
