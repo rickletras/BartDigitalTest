@@ -1,0 +1,11 @@
+logs/*
+.grunt/*
+dist/
+test-results.xml
+app/vendor
+!.gitkeep
+node_modules/
+bower_components/
+tmp
+.DS_Store
+.idea

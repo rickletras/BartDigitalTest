@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">Solicitação de documentos</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <input type="text" class="form-control input-sm" placeholder="Nome do documento"
+                   ng-model="vm.item.docdescription" required/>
+        </div>
+        <div class="form-group">
+            <input id="date" class="form-control input-sm" type="date"
+                   ng-model="vm.item.docdate" required/>
+        </div>
+        <div>
+            <button type="button" 
+                    class="btn btn-primary btn-xs pull-right"
+                    ng-click="vm.add(vm.item)"
+                    ng-disabled="!vm.item.docdescription || !vm.item.docdate">{{'Adicionar'}}</button>
+        </div>
+    </div>
+    <ul class="list-group todoList scrollable">
+        <li class="list-group-item" ng-repeat="item in vm.getItems()">
+            <span>{{item.docdescription}} - {{item.docdate}}</span>
+            <i class="glyphicon glyphicon-trash pull-right" ng-click="vm.done(item)"></i>
+        </li>
+        
+    </ul>
+    <div class="panel-footer" ng-if="vm.getItems().length">
+        <div class="form-control">
+            <button type="button"
+                    class="btn btn-success btn-xs pull-right"
+                    ng-click="vm.send()">{{'Enviar'}}
+            </button>
+        </div>
+    </div>
+    <div class="alert alert-success" ng-if="!vm.send">
+        {{'Enviado com sucesso!'}}
+    </div>
+</div>

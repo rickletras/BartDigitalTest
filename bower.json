@@ -1,0 +1,48 @@
+{
+  "name": "test_angularjs",
+  "version": "0.0.1",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rickletras/testangularjs"
+  },
+  "authors": [
+    "Ricardo Lima <rickletras2000@bol.com.br>"
+  ],
+  "description": "Test with AngularJS and RequireJS",
+  "main": "app/app.js",
+  "keywords": [
+    "angularjs",
+    "requirejs",
+    "AMD",
+    "SPA",
+    "Single-page application"
+  ],
+  "ignore": [
+    "logs/*",
+    ".grunt/*",
+    "dist/",
+    "test-results.xml",
+    "app/vendor/*",
+    "!.gitkeep",
+    "node_modules/",
+    "bower_components/",
+    "tmp",
+    ".DS_Store",
+    ".idea"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "~1.4.5",
+    "angular-route": "~1.4.5",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "bootstrap": "~3.3.5",
+    "requirejs": "~2.1.20"
+  },
+  "dependencies": {
+    "angular-route": "~1.4.5",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "bootstrap": "~3.3.5",
+    "angular-bootstrap": "^2.5.0"
+  }
+}

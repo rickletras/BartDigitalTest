@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{'Visualizar Documentos'}}</h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <input type="text" class="form-control input-sm" ng-model="pb.searchText" placeholder="Pesquisar documento"/>
+        </div>
+    </div>
+    <ul class="list-group contactList scrollable">
+        <li class="list-group-item" ng-repeat="item in pb.items | filter:pb.searchText">
+            <strong>{{item.name}}</strong> 
+            <span class="pull-right glypointer" title="{{'Visualizar anexo'}}">
+                <a href="" id="a{{$index}}" ng-click="pb.anexo(item.name, $index)">
+                    <i class="btn btn-link glyphicon glyphicon-download-alt"></i>
+                </a>  
+            </span>
+            <ul class="list-unstyled list-inline">
+                <li ng-if="item.date"><i class="glyphicon glyphicon-envelope"></i>  {{item.date}}</li>
+            </ul>
+        </li>
+    </ul>
+</div>
